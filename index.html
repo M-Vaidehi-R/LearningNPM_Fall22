@@ -10,31 +10,38 @@
     <title>Learning NPM snd SASS</title>
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <ul>
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-                <li>four</li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="content">
-        <article>
-            <h1>my awesome article</h1>
-            <aside>this is the aside</aside>
-        </article>
+
+    <main class="main">
+<section class="team-section">
+
+</section>
     </main>
 
-    <footer>
-        <nav class="subnav">
-            <ul>
-                <li>alpha</li>
-                <li>beta</li>
-            </ul>
-        </nav>
-    </footer>
+
+    <!--templates dont get rendeted, but their contents will-->
+
+<template id="user-template">
+  <section>
+
+       <h1 class="user-name">my awesome super app</h1>
+        <article class="user-desc">
+        this is the article
+        <aside>this is the aside</aside>
+
+        </article>
+
+ </section>
+
+    </template>
+
+    <!--script links go down here at the bottom-->
+    <!--use a defer attribute to delay parsing (should be the last thing read)-->
+
+    <!--add the module attribute to let us load partials into the main file-->
+
+
+   <!-- <script src="js/modules/data.js"></script>   because its imported, so no need of this  anymore--> 
+    <script src="js/main.js"  defer type="module"></script>
 </body>
 </html>

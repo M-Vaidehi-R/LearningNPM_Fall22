@@ -1,12 +1,10 @@
-body { 
-    color: white;
-    background-color: black;
+@import "./modules/_reset.scss";
+@import "./modules/_vars.scss";
 
-    font-size:  16px;
 
-    //  more generic rules here
-}
+//this is a perfectly valid sass file
 
+@import "./modules/_default.scss";
 @import "./modules/_main.scss";
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";

@@ -1,6 +1,6 @@
 // imports go at the top of of the JS file
 
-import {profs} from  "./modules/data.js";  
+import {getData} from "./modules/dataMiner.js";  
 
 //this is an IIFE (immeadiately invoked function expression)
 //this is great for encapsulating code / making it private
@@ -15,9 +15,13 @@ import {profs} from  "./modules/data.js";
       let theTemplate = document.querySelector("#user-template").content,
           theTeam = document.querySelector("#team-section");
 
-    function changeCopy() {
-        //parse the top-level props from the profs objects (the prof names)
-        const theProfs = Object.keys(profs);
+          //judt to test if it imported correctly
+          //getData();
+
+    function buildTeam(data) {
+        //get all the keys from
+        debugger;
+        const theProfs = Object.keys(data);
 
         //this JS creates keys like [trevor, justin etc]
 
@@ -27,11 +31,11 @@ import {profs} from  "./modules/data.js";
             let panel = theTemplate.cloneNode(true),
                 containers= panel.firstElementChild.children;  // the section tags contents
 
-                containers[0].querySelector("img").src = `images/${profs[prof].avatar}`;
+                containers[0].querySelector("img").src = `images/${data[prof].avatar}`;
                 
-                containers[1].textContent = profs[prof].name;
-                containers[2].textContent = profs[prof].role;
-                containers[3].textContent = profs[prof].nickname;
+                containers[1].textContent = data[prof].name;
+                containers[2].textContent = data[prof].role;
+                containers[3].textContent = data[prof].nickname;
 
                 theTeam.appendChild(panel);
         })
@@ -39,5 +43,5 @@ import {profs} from  "./modules/data.js";
 
     }   
 
-    changeCopy();
+    getData(buildTeam);
 })();

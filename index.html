@@ -10,7 +10,7 @@
     <title>Learning NPM snd SASS</title>
 </head>
 <body>
-
+    <h1 class="hidden">This is a team page</h1>
 
     <main class="main">
 <section class="team-section">
@@ -22,16 +22,17 @@
     <!--templates dont get rendeted, but their contents will-->
 
 <template id="user-template">
-  <section>
 
-       <h1 class="user-name">my awesome super app</h1>
-        <article class="user-desc">
-        this is the article
-        <aside>this is the aside</aside>
-
-        </article>
-
- </section>
+    <section class="bio-panel">
+        <div class="avatar">
+            <!-- src gets added dynamically -->
+            <img src="" alt="prof image">
+        </div>
+        <!-- slug is just placeholder - this will get replaced -->
+        <h2 class="p_name">slug</h2>
+        <h3 class="p_role">slug</h3>
+        <p class="p_nickname">slug</p>
+    </section>
 
     </template>
 

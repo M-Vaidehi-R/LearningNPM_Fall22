@@ -17,7 +17,7 @@ import {profs} from  "./modules/data.js";
 
     function changeCopy() {
         //parse the top-level props from the profs objects (the prof names)
-        let theProfs = Object.keys(profs);
+        const theProfs = Object.keys(profs);
 
         //this JS creates keys like [trevor, justin etc]
 
@@ -27,8 +27,11 @@ import {profs} from  "./modules/data.js";
             let panel = theTemplate.cloneNode(true),
                 containers= panel.firstElementChild.children;  // the section tags contents
 
-                containers[0].textContent = profs[prof].name;
-                containers[1].textContent = profs[prof].role;
+                containers[0].querySelector("img").src = `images/${profs[prof].avatar}`;
+                
+                containers[1].textContent = profs[prof].name;
+                containers[2].textContent = profs[prof].role;
+                containers[3].textContent = profs[prof].nickname;
 
                 theTeam.appendChild(panel);
         })

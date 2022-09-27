@@ -1,10 +1,17 @@
+
+//start with imports (order is imp
 @import "./modules/_reset.scss";
 @import "./modules/_vars.scss";
 
 
-//this is a perfectly valid sass file
-
+//import mobile styles first
 @import "./modules/_default.scss";
+@import "./modules/_queries.scss";
+
+// component files next
 @import "./modules/_main.scss";
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";
+
+//atomic files go here
+@import "./modules/_biopanel.scss";

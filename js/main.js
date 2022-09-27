@@ -13,7 +13,7 @@ import {profs} from  "./modules/data.js";
       //into which we will clone a copy of the markup
 
       let theTemplate = document.querySelector("#user-template").content,
-          theTeam = document.querySelector(".team-section");
+          theTeam = document.querySelector("#team-section");
 
     function changeCopy() {
         //parse the top-level props from the profs objects (the prof names)
